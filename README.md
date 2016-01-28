@@ -8,8 +8,9 @@ Prerequisites:
 * virtualbox
 
 Just clone this, and run:
- vagrant up
- vagrant ssh
- cd vyos-build
- ./configure
- sudo make iso
+
+    vagrant up
+    vagrant ssh
+    cd vyos-build
+    ./configure
+    sudo make iso
