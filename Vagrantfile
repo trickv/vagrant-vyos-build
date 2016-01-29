@@ -3,8 +3,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "init.sh"
   config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
   config.vm.provision "file", source: "~/.vimrc", destination: ".vimrc"
-  config.vm.provider :aws do |aws|
-    aws.ami = "ami-7747d01e" # Debian 8
+  config.vm.provider :aws do |aws, override|
+    aws.ami = "ami-0ed89d79" # Debian 8
+    aws.region = "eu-west-1" # to match ami id
+    override.ssh.username = "admin"
   end
 end
 
