@@ -9,7 +9,7 @@ apt-get update
 
 apt-get -q -y dist-upgrade
 
-apt-get -q -y install build-essential python-pystache live-build
+apt-get -q -y install build-essential python-pystache live-build pbuilder devscripts
 
 apt-get -q -y install git vim
 
